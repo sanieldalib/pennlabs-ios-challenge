@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF38F52C2156A97000FF60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52B2156A97000FF60CA /* AppDelegate.swift */; };
+		EF38F52E2156A97000FF60CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52D2156A97000FF60CA /* HomeViewController.swift */; };
+		EF38F5312156A97000FF60CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF38F52F2156A97000FF60CA /* Main.storyboard */; };
+		EF38F5332156A97100FF60CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF38F5322156A97100FF60CA /* Assets.xcassets */; };
+		EF38F5362156A97200FF60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF38F5342156A97200FF60CA /* LaunchScreen.storyboard */; };
+		EF38F53E2156AA3300FF60CA /* diningHallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F53D2156AA3300FF60CA /* diningHallCell.swift */; };
+		EF38F5402156AACF00FF60CA /* tableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F53F2156AACF00FF60CA /* tableViewModel.swift */; };
+		EF38F5422156AAEA00FF60CA /* diningHall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F5412156AAEA00FF60CA /* diningHall.swift */; };
+		EF38F5482156B3CD00FF60CA /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F5462156B3CD00FF60CA /* headerCell.swift */; };
+		EF38F5492156B3CD00FF60CA /* headerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF38F5472156B3CD00FF60CA /* headerCell.xib */; };
+		EF38F54B2156B82100FF60CA /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F54A2156B82100FF60CA /* Extentions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF38F5282156A97000FF60CA /* pennlabs-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pennlabs-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF38F52B2156A97000FF60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF38F52D2156A97000FF60CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EF38F5302156A97000FF60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF38F5322156A97100FF60CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF38F5352156A97200FF60CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF38F5372156A97200FF60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF38F53D2156AA3300FF60CA /* diningHallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diningHallCell.swift; sourceTree = "<group>"; };
+		EF38F53F2156AACF00FF60CA /* tableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewModel.swift; sourceTree = "<group>"; };
+		EF38F5412156AAEA00FF60CA /* diningHall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diningHall.swift; sourceTree = "<group>"; };
+		EF38F5462156B3CD00FF60CA /* headerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
+		EF38F5472156B3CD00FF60CA /* headerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerCell.xib; sourceTree = "<group>"; };
+		EF38F54A2156B82100FF60CA /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF38F5252156A97000FF60CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF38F51F2156A97000FF60CA = {
+			isa = PBXGroup;
+			children = (
+				EF38F52A2156A97000FF60CA /* pennlabs-ios-challenge */,
+				EF38F5292156A97000FF60CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF38F5292156A97000FF60CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF38F5282156A97000FF60CA /* pennlabs-ios-challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF38F52A2156A97000FF60CA /* pennlabs-ios-challenge */ = {
+			isa = PBXGroup;
+			children = (
+				EF38F52B2156A97000FF60CA /* AppDelegate.swift */,
+				EF38F52D2156A97000FF60CA /* HomeViewController.swift */,
+				EF38F5432156AB1D00FF60CA /* Model */,
+				EF38F53D2156AA3300FF60CA /* diningHallCell.swift */,
+				EF38F5462156B3CD00FF60CA /* headerCell.swift */,
+				EF38F5472156B3CD00FF60CA /* headerCell.xib */,
+				EF38F52F2156A97000FF60CA /* Main.storyboard */,
+				EF38F54A2156B82100FF60CA /* Extentions.swift */,
+				EF38F5322156A97100FF60CA /* Assets.xcassets */,
+				EF38F5342156A97200FF60CA /* LaunchScreen.storyboard */,
+				EF38F5372156A97200FF60CA /* Info.plist */,
+			);
+			path = "pennlabs-ios-challenge";
+			sourceTree = "<group>";
+		};
+		EF38F5432156AB1D00FF60CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF38F53F2156AACF00FF60CA /* tableViewModel.swift */,
+				EF38F5412156AAEA00FF60CA /* diningHall.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF38F5272156A97000FF60CA /* pennlabs-ios-challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF38F53A2156A97200FF60CA /* Build configuration list for PBXNativeTarget "pennlabs-ios-challenge" */;
+			buildPhases = (
+				EF38F5242156A97000FF60CA /* Sources */,
+				EF38F5252156A97000FF60CA /* Frameworks */,
+				EF38F5262156A97000FF60CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pennlabs-ios-challenge";
+			productName = "pennlabs-ios-challenge";
+			productReference = EF38F5282156A97000FF60CA /* pennlabs-ios-challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF38F5202156A97000FF60CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = dsalib;
+				TargetAttributes = {
+					EF38F5272156A97000FF60CA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EF38F5232156A97000FF60CA /* Build configuration list for PBXProject "pennlabs-ios-challenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF38F51F2156A97000FF60CA;
+			productRefGroup = EF38F5292156A97000FF60CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF38F5272156A97000FF60CA /* pennlabs-ios-challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF38F5262156A97000FF60CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF38F5492156B3CD00FF60CA /* headerCell.xib in Resources */,
+				EF38F5362156A97200FF60CA /* LaunchScreen.storyboard in Resources */,
+				EF38F5332156A97100FF60CA /* Assets.xcassets in Resources */,
+				EF38F5312156A97000FF60CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF38F5242156A97000FF60CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF38F5422156AAEA00FF60CA /* diningHall.swift in Sources */,
+				EF38F52E2156A97000FF60CA /* HomeViewController.swift in Sources */,
+				EF38F5482156B3CD00FF60CA /* headerCell.swift in Sources */,
+				EF38F53E2156AA3300FF60CA /* diningHallCell.swift in Sources */,
+				EF38F52C2156A97000FF60CA /* AppDelegate.swift in Sources */,
+				EF38F5402156AACF00FF60CA /* tableViewModel.swift in Sources */,
+				EF38F54B2156B82100FF60CA /* Extentions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF38F52F2156A97000FF60CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF38F5302156A97000FF60CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF38F5342156A97200FF60CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF38F5352156A97200FF60CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF38F5382156A97200FF60CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF38F5392156A97200FF60CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF38F53B2156A97200FF60CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FWU4GS7RGH;
+				INFOPLIST_FILE = "pennlabs-ios-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dsalib.pennlabs-ios-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF38F53C2156A97200FF60CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FWU4GS7RGH;
+				INFOPLIST_FILE = "pennlabs-ios-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dsalib.pennlabs-ios-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF38F5232156A97000FF60CA /* Build configuration list for PBXProject "pennlabs-ios-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF38F5382156A97200FF60CA /* Debug */,
+				EF38F5392156A97200FF60CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF38F53A2156A97200FF60CA /* Build configuration list for PBXNativeTarget "pennlabs-ios-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF38F53B2156A97200FF60CA /* Debug */,
+				EF38F53C2156A97200FF60CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF38F5202156A97000FF60CA /* Project object */;
+}
