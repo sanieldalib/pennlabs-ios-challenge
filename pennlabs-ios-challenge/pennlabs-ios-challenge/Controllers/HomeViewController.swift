@@ -7,21 +7,32 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var diningData = tableViewModel()
     let refresh = UIRefreshControl()
-
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        Networking.getData {
+        Networking.getData(completion: {
+            //successful data callback
             self.diningData.loadData(data: Networking.venues, completed: {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             })
+        }) {
+            //error callback
+            self.diningData.loadDefaults()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                //alerts the user that there an error occurred
+                let banner = NotificationBanner(title: "Check your internet connection", style: .danger)
+                banner.show()
+            }
         }
         tableView.dataSource = self
         tableView.delegate = self
@@ -29,19 +40,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         refresh.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         refresh.tintColor = UIColor(red: 41/255, green: 128/255, blue: 185/255, alpha: 1)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @objc func refreshData (_ sender: Any) {
-        Networking.getData {
+        Networking.getData(completion: {
+            //successful data callback
             self.diningData.loadData(data: Networking.venues, completed: {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.refresh.endRefreshing()
                 }
             })
+        }) {
+            //error callback
+            DispatchQueue.main.async {
+                self.refresh.endRefreshing()
+                let banner = NotificationBanner(title: "Check your internet connection", style: .danger)
+                banner.show()
+            }
         }
     }
     
@@ -55,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         headerCell.headerTitle.text = section == 0 ? "Dining Halls" : "Retail Dining"
         return headerCell
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
     }
@@ -95,15 +114,34 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return section == 0 ? diningData.diningHalls.count : diningData.retailDining.count
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        //check to see if that specific dining hall has a url before segue - If JSON decoder errors then URL is nil
+        if identifier == "toWebView"{
+            if let index = tableView.indexPathForSelectedRow{
+                let diningHall = index.section == 0 ? diningData.diningHalls[index.row] : diningData.retailDining[index.row]
+                if diningHall.url == nil {
+                    //error banner is thrown if no URL is found
+                    let banner = NotificationBanner(title: "An error occured.", subtitle: "Check your internet connection", style: .danger)
+                    banner.show()
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWebView"{
             if let webVC = segue.destination as? WebViewController{
                 if let index = tableView.indexPathForSelectedRow{
-                    webVC.diningURL = index.section == 0 ? diningData.diningHalls[index.row].url : diningData.retailDining[index.row].url
-                    webVC.title = index.section == 0 ? diningData.diningHalls[index.row].name : diningData.retailDining[index.row].name
+                    let diningHall = index.section == 0 ? diningData.diningHalls[index.row] : diningData.retailDining[index.row]
+                    if let diningURL = diningHall.url {
+                        webVC.diningURL = diningURL
+                        webVC.title = diningHall.name
+                    }
                 }
             }
         }
     }
-
+    
 }

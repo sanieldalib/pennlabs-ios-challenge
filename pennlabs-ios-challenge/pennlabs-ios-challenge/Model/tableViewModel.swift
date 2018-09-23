@@ -38,5 +38,12 @@ struct tableViewModel {
         }
         completed()
     }
+    
+    mutating func loadDefaults() {
+        //in the case where JSON Decoder throws an error, defaults are loaded in
+        diningHalls = [DiningVenue(name: names[593]!, image: images[593]!, type: VenueType.residential), DiningVenue(name: names[636]!, image: images[636]!, type: VenueType.residential), DiningVenue(name: names[637]!, image: images[637]!, type: VenueType.residential), DiningVenue(name: names[638]!, image: images[638]!, type: VenueType.residential), DiningVenue(name: names[1442]!, image: images[1442]!, type: VenueType.residential), DiningVenue(name: names[747]!, image: images[747]!, type: VenueType.residential)]
+        
+        retailDining = [DiningVenue(name: names[639]!, image: images[639]!, type: VenueType.retail), DiningVenue(name: names[640]!, image: images[640]!, type: VenueType.retail), DiningVenue(name: names[642]!, image: images[642]!, type: VenueType.retail), DiningVenue(name: names[1057]!, image: images[1057]!, type: VenueType.retail), DiningVenue(name: names[1058]!, image: images[1058]!, type: VenueType.retail), DiningVenue(name: names[1163]!, image: images[1163]!, type: VenueType.retail)]
+    }
 
 }

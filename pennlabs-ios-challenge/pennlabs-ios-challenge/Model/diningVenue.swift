@@ -16,7 +16,7 @@ struct DiningVenue {
     var hours = [(Date, Date)]()
     var hourString = ""
     var type : VenueType!
-    var url : URL!
+    var url : URL?
     
     enum DiningStatus : String {
         case OPEN = "OPEN"
@@ -93,6 +93,16 @@ struct DiningVenue {
             }
         }
     }
+    
+    init(name: String, image: UIImage, type: VenueType) {
+        self.name = name
+        self.image = image
+        self.type = type
+        self.hours = []
+        self.hourString = ""
+        self.status = .CLOSED
+    }
+    
 }
 
 

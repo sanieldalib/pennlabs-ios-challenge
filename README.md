@@ -2,10 +2,11 @@
 Fall 2018 PennApps iOS Challenge
 
 ## Inspiration
-This is a clone of the Dining portion of the Penn Mobile App. Creating a clone was part of the challenge proposed by PennLabs as part of the application process.
+This is a clone of the Dining portion of the Penn Mobile App. Creating a clone was part of the challenge proposed by PennLabs as part of the application process. I also wanted to extend the functionality of the app and sprinkled in a few add ins.
 
 ## Additional Features
-- Dependency Free
+- Check if internet is down and WebView blockling if it is
+- In app errors and notifications (Courtesy of NotificationBanner: https://github.com/Daltron/NotificationBanner)
 - Pull to refresh
 - Progress Bar in WebView
 

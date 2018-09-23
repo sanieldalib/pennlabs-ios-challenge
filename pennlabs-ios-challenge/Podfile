@@ -6,5 +6,7 @@ target 'pennlabs-ios-challenge' do
   use_frameworks!
 
   # Pods for pennlabs-ios-challenge
+  pod 'NotificationBannerSwift'
+
 
 end

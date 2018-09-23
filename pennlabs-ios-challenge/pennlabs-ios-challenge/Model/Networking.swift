@@ -11,9 +11,10 @@ import Foundation
 struct Networking {
     
     static var venues = [Venue]()
+//    static var defaults = []
     
     //ispired by https://medium.com/@nimjea/json-parsing-in-swift-2498099b78f
-    static func getData(completion: @escaping () -> ()) {
+    static func getData(completion: @escaping () -> (), errorCallback: @escaping () -> ()) {
         Networking.venues.removeAll()
         guard let url = URL(string: "http://api.pennlabs.org/dining/venues") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -29,6 +30,7 @@ struct Networking {
                 completion()
             } catch let parsingError {
                 print("Error", parsingError)
+                errorCallback()
             }
         }
         task.resume()

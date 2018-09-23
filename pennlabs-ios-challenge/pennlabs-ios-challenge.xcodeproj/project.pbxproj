@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6015D5719781479FC50C1AD0 /* Pods_pennlabs_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506CA658F481FEB7B8F7AF37 /* Pods_pennlabs_ios_challenge.framework */; };
 		EF38F52C2156A97000FF60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52B2156A97000FF60CA /* AppDelegate.swift */; };
 		EF38F52E2156A97000FF60CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52D2156A97000FF60CA /* HomeViewController.swift */; };
 		EF38F5312156A97000FF60CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF38F52F2156A97000FF60CA /* Main.storyboard */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3309F6742410A0404809A9 /* Pods-pennlabs-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennlabs-ios-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		506CA658F481FEB7B8F7AF37 /* Pods_pennlabs_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pennlabs_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		978685EFA0E5E9395C8CC459 /* Pods-pennlabs-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennlabs-ios-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		EF38F5282156A97000FF60CA /* pennlabs-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pennlabs-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF38F52B2156A97000FF60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF38F52D2156A97000FF60CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -45,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6015D5719781479FC50C1AD0 /* Pods_pennlabs_ios_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A99C3DB1FA6EA2E09ED63C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				978685EFA0E5E9395C8CC459 /* Pods-pennlabs-ios-challenge.debug.xcconfig */,
+				1A3309F6742410A0404809A9 /* Pods-pennlabs-ios-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92661756C7C32376D2C897ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				506CA658F481FEB7B8F7AF37 /* Pods_pennlabs_ios_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF38F51F2156A97000FF60CA = {
 			isa = PBXGroup;
 			children = (
 				EF38F52A2156A97000FF60CA /* pennlabs-ios-challenge */,
 				EF38F5292156A97000FF60CA /* Products */,
+				7A99C3DB1FA6EA2E09ED63C1 /* Pods */,
+				92661756C7C32376D2C897ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF38F53A2156A97200FF60CA /* Build configuration list for PBXNativeTarget "pennlabs-ios-challenge" */;
 			buildPhases = (
+				A3896BFDBCC925A612BF5A89 /* [CP] Check Pods Manifest.lock */,
 				EF38F5242156A97000FF60CA /* Sources */,
 				EF38F5252156A97000FF60CA /* Frameworks */,
 				EF38F5262156A97000FF60CA /* Resources */,
+				6EEF740E4C38A2ED00D6B26D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +204,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EEF740E4C38A2ED00D6B26D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3896BFDBCC925A612BF5A89 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pennlabs-ios-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF38F5242156A97000FF60CA /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		EF38F53B2156A97200FF60CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 978685EFA0E5E9395C8CC459 /* Pods-pennlabs-ios-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +422,7 @@
 		};
 		EF38F53C2156A97200FF60CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3309F6742410A0404809A9 /* Pods-pennlabs-ios-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
