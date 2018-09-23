@@ -31,6 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
                 //alerts the user that there an error occurred
                 let banner = NotificationBanner(title: "Check your internet connection", style: .danger)
+                banner.duration = 1
                 banner.show()
             }
         }
@@ -59,6 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             DispatchQueue.main.async {
                 self.refresh.endRefreshing()
                 let banner = NotificationBanner(title: "Check your internet connection", style: .danger)
+                banner.duration = 1
                 banner.show()
             }
         }
@@ -121,7 +123,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let diningHall = index.section == 0 ? diningData.diningHalls[index.row] : diningData.retailDining[index.row]
                 if diningHall.url == nil {
                     //error banner is thrown if no URL is found
-                    let banner = NotificationBanner(title: "An error occured.", subtitle: "Check your internet connection", style: .danger)
+                    let banner = NotificationBanner(title: "An error occurred.", subtitle: "Check your internet connection", style: .danger)
+                    banner.duration = 1
                     banner.show()
                     return false
                 }
