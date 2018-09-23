@@ -78,6 +78,7 @@
                                             <outlet property="diningName" destination="09M-Yj-oQx" id="YnB-sR-SRh"/>
                                             <outlet property="hoursLabel" destination="gV3-2v-tNK" id="m4a-5y-cOf"/>
                                             <outlet property="statusLabel" destination="Nol-W6-pp0" id="jH5-Kl-GFZ"/>
+                                            <segue destination="UOa-py-l9G" kind="show" identifier="toWebView" id="dhW-R6-3Hv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -100,6 +101,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="0ZP-OW-L2E">
+            <objects>
+                <viewController id="UOa-py-l9G" customClass="WebViewController" customModule="pennlabs_ios_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ab8-BT-nfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEF-14-mD7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UEF-14-mD7" firstAttribute="top" secondItem="1tL-qS-afn" secondAttribute="top" id="7RR-3N-705"/>
+                            <constraint firstItem="1tL-qS-afn" firstAttribute="bottom" secondItem="UEF-14-mD7" secondAttribute="bottom" id="fcf-ki-aIq"/>
+                            <constraint firstItem="UEF-14-mD7" firstAttribute="leading" secondItem="1tL-qS-afn" secondAttribute="leading" id="kXo-Bu-mhM"/>
+                            <constraint firstItem="1tL-qS-afn" firstAttribute="trailing" secondItem="UEF-14-mD7" secondAttribute="trailing" id="mHy-7N-HRA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1tL-qS-afn"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="UEF-14-mD7" id="rwE-q5-7ua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giA-qu-S7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sY2-LI-RAG">

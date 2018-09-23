@@ -15,6 +15,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        Networking.getData {
+            self.diningData.loadData(data: Networking.venues)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -42,12 +48,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "diningHallCell") as! diningHallCell
+        cell.statusLabel.textColor = .statusColor
         if indexPath.section == 0 {
+            
+            if diningData.diningHalls[indexPath.row].status == .OPEN{
+                cell.statusLabel.textColor = .openColor
+            }
+            
             cell.diningName?.text = diningData.diningHalls[indexPath.row].name
             cell.diningImage.image = diningData.diningHalls[indexPath.row].image
+            cell.statusLabel.text = diningData.diningHalls[indexPath.row].status.rawValue
+            cell.hoursLabel.text = diningData.diningHalls[indexPath.row].hourString
         } else {
+            if diningData.retailDining[indexPath.row].status == .OPEN{
+                cell.statusLabel.textColor = .openColor
+            }
+            
             cell.diningName?.text = diningData.retailDining[indexPath.row].name
             cell.diningImage.image = diningData.retailDining[indexPath.row].image
+            cell.statusLabel.text = diningData.retailDining[indexPath.row].status.rawValue
+            cell.hoursLabel.text = diningData.retailDining[indexPath.row].hourString
         }
         return cell
     }
@@ -58,6 +78,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == 0 ? diningData.diningHalls.count : diningData.retailDining.count
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toWebView"{
+            if let webVC = segue.destination as? WebViewController{
+                if let index = tableView.indexPathForSelectedRow{
+                    webVC.diningURL = index.section == 0 ? diningData.diningHalls[index.row].url : diningData.retailDining[index.row].url
+                }
+            }
+        }
     }
     
 

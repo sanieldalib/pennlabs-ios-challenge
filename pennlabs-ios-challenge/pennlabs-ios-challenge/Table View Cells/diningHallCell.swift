@@ -11,7 +11,13 @@ import UIKit
 class diningHallCell: UITableViewCell {
 
     @IBOutlet weak var diningName: UILabel?
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel! {
+        didSet {
+            if statusLabel.text == "OPEN" {
+                statusLabel.textColor = UIColor.openColor
+            }
+        }
+    }
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var diningImage: UIImageView!
     

@@ -7,21 +7,33 @@
 //
 
 import Foundation
+import UIKit
 
 struct tableViewModel {
-    var diningHalls = [DiningHall(name: "1920 Commons", image: #imageLiteral(resourceName: "commons")),
-                       DiningHall(name: "McClelland", image: #imageLiteral(resourceName: "mcclelland")),
-                       DiningHall(name: "NCH Dining", image: #imageLiteral(resourceName: "nch")),
-                       DiningHall(name: "Hill House", image: #imageLiteral(resourceName: "hill")),
-                       DiningHall(name: "English House", image: #imageLiteral(resourceName: "kceh")),
-                       DiningHall(name: "Falk Kosher", image: #imageLiteral(resourceName: "hillel"))]
     
-    //excluded pret and mba cafe as they do not have images
-    var retailDining = [DiningHall(name: "Tortas Frontera", image: #imageLiteral(resourceName: "tortas")),
-                        DiningHall(name: "Gourmet Grocer", image: #imageLiteral(resourceName: "gourmetgrocer")),
-                        DiningHall(name: "Houston Market", image: #imageLiteral(resourceName: "houston")),
-                        DiningHall(name: "Joe's Café", image: #imageLiteral(resourceName: "joes")),
-                        DiningHall(name: "Mark's Café", image: #imageLiteral(resourceName: "marks")),
-                        DiningHall(name: "Beefsteak", image: #imageLiteral(resourceName: "beefsteak")),
-                        DiningHall(name: "Starbucks", image: #imageLiteral(resourceName: "starbucks"))]
+    let names = [593:"1920 Commons", 636: "Hill House", 637: "English House", 638 : "Falk Kosher",
+                 639 : "Houston Market", 640 : "Mark's Café", 641 : "Accenture Café", 642 : "Joe's Café",
+                 1442 : "NCH Dining", 747 : "McClelland", 1057 : "Gourmet Grocer", 1058 : "Tortas Frontera",
+                 1163 : "Starbucks", 1731 : "NCH Retail", 1732 : "MBA Café", 1733 : "Pret a Manger"]
+    
+    let images = [593: #imageLiteral(resourceName: "commons"), 636: #imageLiteral(resourceName: "hill"), 637: #imageLiteral(resourceName: "kceh"), 638 : #imageLiteral(resourceName: "hillel"), 639 : #imageLiteral(resourceName: "houston"), 640 : #imageLiteral(resourceName: "marks"), 642 : #imageLiteral(resourceName: "joes"),
+                 1442 : #imageLiteral(resourceName: "nch"), 747 : #imageLiteral(resourceName: "mcclelland"), 1057 : #imageLiteral(resourceName: "gourmetgrocer"), 1058 : #imageLiteral(resourceName: "tortas"), 1163 : #imageLiteral(resourceName: "starbucks")]
+    
+    var diningHalls = [DiningVenue]()
+    var retailDining = [DiningVenue]()
+    
+    mutating func loadData (data: [Venue]) {
+        for venue in data {
+            if (!(venue.id == 641 || venue.id == 1731 || venue.id == 1732 || venue.id == 1733)) {
+                let newVenue = DiningVenue(name: names[venue.id]!, image: images[venue.id]!, venueData: venue)
+                
+                if (venue.venueType == .residential){
+                    diningHalls.append(newVenue)
+                } else {
+                    retailDining.append(newVenue)
+                }
+            }
+        }
+    }
+
 }

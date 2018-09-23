@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882E324E29979A8D72B1E2F6 /* Pods_pennlabs_ios_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC2B0A126A928D86292B517 /* Pods_pennlabs_ios_challenge.framework */; };
 		EF38F52C2156A97000FF60CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52B2156A97000FF60CA /* AppDelegate.swift */; };
 		EF38F52E2156A97000FF60CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F52D2156A97000FF60CA /* HomeViewController.swift */; };
 		EF38F5312156A97000FF60CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF38F52F2156A97000FF60CA /* Main.storyboard */; };
@@ -14,13 +15,18 @@
 		EF38F5362156A97200FF60CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF38F5342156A97200FF60CA /* LaunchScreen.storyboard */; };
 		EF38F53E2156AA3300FF60CA /* diningHallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F53D2156AA3300FF60CA /* diningHallCell.swift */; };
 		EF38F5402156AACF00FF60CA /* tableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F53F2156AACF00FF60CA /* tableViewModel.swift */; };
-		EF38F5422156AAEA00FF60CA /* diningHall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F5412156AAEA00FF60CA /* diningHall.swift */; };
+		EF38F5422156AAEA00FF60CA /* diningVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F5412156AAEA00FF60CA /* diningVenue.swift */; };
 		EF38F5482156B3CD00FF60CA /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F5462156B3CD00FF60CA /* headerCell.swift */; };
 		EF38F5492156B3CD00FF60CA /* headerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF38F5472156B3CD00FF60CA /* headerCell.xib */; };
 		EF38F54B2156B82100FF60CA /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38F54A2156B82100FF60CA /* Extentions.swift */; };
+		EF5EBFF62156C741000C5C7D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EBFF52156C741000C5C7D /* Networking.swift */; };
+		EF5EBFF82157125B000C5C7D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5EBFF72157125B000C5C7D /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261290CE35820B6302A0405A /* Pods-pennlabs-ios-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennlabs-ios-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		5EC2B0A126A928D86292B517 /* Pods_pennlabs_ios_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pennlabs_ios_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757540D6E818AA40C967CF27 /* Pods-pennlabs-ios-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pennlabs-ios-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pennlabs-ios-challenge/Pods-pennlabs-ios-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		EF38F5282156A97000FF60CA /* pennlabs-ios-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pennlabs-ios-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF38F52B2156A97000FF60CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF38F52D2156A97000FF60CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -30,10 +36,12 @@
 		EF38F5372156A97200FF60CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF38F53D2156AA3300FF60CA /* diningHallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diningHallCell.swift; sourceTree = "<group>"; };
 		EF38F53F2156AACF00FF60CA /* tableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewModel.swift; sourceTree = "<group>"; };
-		EF38F5412156AAEA00FF60CA /* diningHall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diningHall.swift; sourceTree = "<group>"; };
+		EF38F5412156AAEA00FF60CA /* diningVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diningVenue.swift; sourceTree = "<group>"; };
 		EF38F5462156B3CD00FF60CA /* headerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
 		EF38F5472156B3CD00FF60CA /* headerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerCell.xib; sourceTree = "<group>"; };
 		EF38F54A2156B82100FF60CA /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		EF5EBFF52156C741000C5C7D /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		EF5EBFF72157125B000C5C7D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882E324E29979A8D72B1E2F6 /* Pods_pennlabs_ios_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66D85FC094BC5597A78A03A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EC2B0A126A928D86292B517 /* Pods_pennlabs_ios_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CABA03FE63024E33972433EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				757540D6E818AA40C967CF27 /* Pods-pennlabs-ios-challenge.debug.xcconfig */,
+				261290CE35820B6302A0405A /* Pods-pennlabs-ios-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF38F51F2156A97000FF60CA = {
 			isa = PBXGroup;
 			children = (
 				EF38F52A2156A97000FF60CA /* pennlabs-ios-challenge */,
 				EF38F5292156A97000FF60CA /* Products */,
+				CABA03FE63024E33972433EF /* Pods */,
+				66D85FC094BC5597A78A03A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +96,9 @@
 			children = (
 				EF38F52B2156A97000FF60CA /* AppDelegate.swift */,
 				EF38F52D2156A97000FF60CA /* HomeViewController.swift */,
+				EF5EBFF72157125B000C5C7D /* WebViewController.swift */,
+				EF38F54C2156C24C00FF60CA /* Table View Cells */,
 				EF38F5432156AB1D00FF60CA /* Model */,
-				EF38F53D2156AA3300FF60CA /* diningHallCell.swift */,
-				EF38F5462156B3CD00FF60CA /* headerCell.swift */,
-				EF38F5472156B3CD00FF60CA /* headerCell.xib */,
 				EF38F52F2156A97000FF60CA /* Main.storyboard */,
 				EF38F54A2156B82100FF60CA /* Extentions.swift */,
 				EF38F5322156A97100FF60CA /* Assets.xcassets */,
@@ -85,9 +112,20 @@
 			isa = PBXGroup;
 			children = (
 				EF38F53F2156AACF00FF60CA /* tableViewModel.swift */,
-				EF38F5412156AAEA00FF60CA /* diningHall.swift */,
+				EF38F5412156AAEA00FF60CA /* diningVenue.swift */,
+				EF5EBFF52156C741000C5C7D /* Networking.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EF38F54C2156C24C00FF60CA /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF38F5462156B3CD00FF60CA /* headerCell.swift */,
+				EF38F5472156B3CD00FF60CA /* headerCell.xib */,
+				EF38F53D2156AA3300FF60CA /* diningHallCell.swift */,
+			);
+			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF38F53A2156A97200FF60CA /* Build configuration list for PBXNativeTarget "pennlabs-ios-challenge" */;
 			buildPhases = (
+				602AC4D2A48ED4B19A71487E /* [CP] Check Pods Manifest.lock */,
 				EF38F5242156A97000FF60CA /* Sources */,
 				EF38F5252156A97000FF60CA /* Frameworks */,
 				EF38F5262156A97000FF60CA /* Resources */,
@@ -157,14 +196,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		602AC4D2A48ED4B19A71487E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pennlabs-ios-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF38F5242156A97000FF60CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF38F5422156AAEA00FF60CA /* diningHall.swift in Sources */,
+				EF38F5422156AAEA00FF60CA /* diningVenue.swift in Sources */,
+				EF5EBFF82157125B000C5C7D /* WebViewController.swift in Sources */,
 				EF38F52E2156A97000FF60CA /* HomeViewController.swift in Sources */,
 				EF38F5482156B3CD00FF60CA /* headerCell.swift in Sources */,
+				EF5EBFF62156C741000C5C7D /* Networking.swift in Sources */,
 				EF38F53E2156AA3300FF60CA /* diningHallCell.swift in Sources */,
 				EF38F52C2156A97000FF60CA /* AppDelegate.swift in Sources */,
 				EF38F5402156AACF00FF60CA /* tableViewModel.swift in Sources */,
@@ -310,6 +372,7 @@
 		};
 		EF38F53B2156A97200FF60CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757540D6E818AA40C967CF27 /* Pods-pennlabs-ios-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +391,7 @@
 		};
 		EF38F53C2156A97200FF60CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261290CE35820B6302A0405A /* Pods-pennlabs-ios-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
