@@ -11,4 +11,4 @@ This is a clone of the Dining portion of the Penn Mobile App. Creating a clone w
 - Progress Bar in WebView
 
 ## Going Forward
-- I would have loved to have given SiriKit a shot, but I didn't have quite enough time. I hope to possible integrate SiriKit with this or on a future project.
+- I would have loved to have given SiriKit a shot, but I didn't actually have a Apple Developer Account at the moment. I hope to possible integrate SiriKit with this or on a future project.
