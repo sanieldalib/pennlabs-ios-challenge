@@ -22,7 +22,7 @@ struct tableViewModel {
     var diningHalls = [DiningVenue]()
     var retailDining = [DiningVenue]()
     
-    mutating func loadData (data: [Venue]) {
+    mutating func loadData (data: [Venue], completed: () -> ()) {
         diningHalls.removeAll()
         retailDining.removeAll()
         for venue in data {
@@ -36,6 +36,7 @@ struct tableViewModel {
                 }
             }
         }
+        completed()
     }
 
 }

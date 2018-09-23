@@ -17,10 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         Networking.getData {
-            self.diningData.loadData(data: Networking.venues)
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.diningData.loadData(data: Networking.venues, completed: {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
         }
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,11 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @objc func refreshData (_ sender: Any) {
         Networking.getData {
-            self.diningData.loadData(data: Networking.venues)
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.refresh.endRefreshing()
-            }
+            self.diningData.loadData(data: Networking.venues, completed: {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refresh.endRefreshing()
+                }
+            })
         }
     }
     
