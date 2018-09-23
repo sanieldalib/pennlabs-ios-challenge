@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 struct Networking {
     
@@ -15,6 +14,7 @@ struct Networking {
     
     //ispired by https://medium.com/@nimjea/json-parsing-in-swift-2498099b78f
     static func getData(completion: @escaping () -> ()) {
+        Networking.venues.removeAll()
         guard let url = URL(string: "http://api.pennlabs.org/dining/venues") else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let dataResponse = data,

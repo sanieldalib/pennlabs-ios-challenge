@@ -23,6 +23,8 @@ struct tableViewModel {
     var retailDining = [DiningVenue]()
     
     mutating func loadData (data: [Venue]) {
+        diningHalls.removeAll()
+        retailDining.removeAll()
         for venue in data {
             if (!(venue.id == 641 || venue.id == 1731 || venue.id == 1732 || venue.id == 1733)) {
                 let newVenue = DiningVenue(name: names[venue.id]!, image: images[venue.id]!, venueData: venue)

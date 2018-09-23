@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gug-lU-gCu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gug-lU-gCu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dining Hours-->
+        <!--Dining-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pennlabs_ios_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +92,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dining Hours" id="Ft7-nE-Ha6"/>
+                    <navigationItem key="navigationItem" title="Dining" id="Ft7-nE-Ha6"/>
                     <connections>
                         <outlet property="tableView" destination="6qM-eU-F8w" id="SzI-sy-Ub2"/>
                     </connections>
@@ -109,28 +108,9 @@
                     <view key="view" contentMode="scaleToFill" id="Ab8-BT-nfG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEF-14-mD7">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UEF-14-mD7" firstAttribute="top" secondItem="1tL-qS-afn" secondAttribute="top" id="7RR-3N-705"/>
-                            <constraint firstItem="1tL-qS-afn" firstAttribute="bottom" secondItem="UEF-14-mD7" secondAttribute="bottom" id="fcf-ki-aIq"/>
-                            <constraint firstItem="UEF-14-mD7" firstAttribute="leading" secondItem="1tL-qS-afn" secondAttribute="leading" id="kXo-Bu-mhM"/>
-                            <constraint firstItem="1tL-qS-afn" firstAttribute="trailing" secondItem="UEF-14-mD7" secondAttribute="trailing" id="mHy-7N-HRA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1tL-qS-afn"/>
                     </view>
-                    <connections>
-                        <outlet property="webview" destination="UEF-14-mD7" id="rwE-q5-7ua"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giA-qu-S7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -95,9 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				EF38F52B2156A97000FF60CA /* AppDelegate.swift */,
-				EF38F52D2156A97000FF60CA /* HomeViewController.swift */,
-				EF5EBFF72157125B000C5C7D /* WebViewController.swift */,
-				EF38F54C2156C24C00FF60CA /* Table View Cells */,
+				EFDF9E5921571E700066A634 /* Controllers */,
+				EF38F54C2156C24C00FF60CA /* Cells */,
 				EF38F5432156AB1D00FF60CA /* Model */,
 				EF38F52F2156A97000FF60CA /* Main.storyboard */,
 				EF38F54A2156B82100FF60CA /* Extentions.swift */,
@@ -118,14 +117,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		EF38F54C2156C24C00FF60CA /* Table View Cells */ = {
+		EF38F54C2156C24C00FF60CA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				EF38F5462156B3CD00FF60CA /* headerCell.swift */,
 				EF38F5472156B3CD00FF60CA /* headerCell.xib */,
 				EF38F53D2156AA3300FF60CA /* diningHallCell.swift */,
 			);
-			path = "Table View Cells";
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EFDF9E5921571E700066A634 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF38F52D2156A97000FF60CA /* HomeViewController.swift */,
+				EF5EBFF72157125B000C5C7D /* WebViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
