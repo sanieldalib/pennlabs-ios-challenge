@@ -5,6 +5,7 @@ Fall 2018 PennApps iOS Challenge
 This is a clone of the Dining portion of the Penn Mobile App. Creating a clone was part of the challenge proposed by PennLabs as part of the application process.
 
 ## Additional Features
+- Dependency Free
 - Pull to refresh
 - Progress Bar in WebView
 
