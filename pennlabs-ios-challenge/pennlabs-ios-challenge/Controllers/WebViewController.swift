@@ -14,19 +14,14 @@ class WebViewController: UIViewController, WKNavigationDelegate{
     var webView: WKWebView!
     var diningURL: URL?
     var progressBar: UIProgressView!
-
-    
-//    override func loadView() {
-//        webView = WKWebView()
-//        webView.navigationDelegate = self
-//        view = webView
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webView = WKWebView()
         view.addSubview(webView)
         webView.translatesAutoresizingMaskIntoConstraints = false
+        
+        //webview autolayout constraints
         if #available(iOS 11.0, *) {
             let guide = self.view.safeAreaLayoutGuide
             webView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
@@ -57,8 +52,10 @@ class WebViewController: UIViewController, WKNavigationDelegate{
                                multiplier: 1.0,
                                constant: 0).isActive = true
         }
+        
         progressBar = UIProgressView(progressViewStyle: .default)
         view.addSubview(progressBar)
+        
         // constraints for progressBar
         progressBar.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 11.0, *) {
@@ -90,7 +87,6 @@ class WebViewController: UIViewController, WKNavigationDelegate{
         webView.navigationDelegate = self
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         webView.load(URLRequest(url: diningURL!))
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
